@@ -80,3 +80,5 @@ function usejutLogin (userLogin = "Usaid"){
     return `${userLogin} just log in`
 }
 console.log(usejutLogin("sam"));
+ 
+//New Funtion02
