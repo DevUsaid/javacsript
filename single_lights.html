@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eee; /* optional */
+}
+
+        .container{
+            position: relative;
+            margin-top: 30px;
+             height: 300px;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    /* 👇 Add these lines */
+    background: black;
+    width: 120px;         /* fixed width box jaisa dekhne ke liye */
+     /* rounded corners */
+    border: none;         /* red border hata diya */
+    padding: 20px 0;
+   
+        }
+
+        .box{
+            /* border: 1px solid green; */
+            border-radius: 50px;
+            height: 60px;
+            width: 50%;
+            text-align:center;
+        }
+        #box1{
+            background-color: red;
+        }
+        #box2{
+            background-color: orange;
+        }
+        #box3{
+            background-color:green;
+        }
+        .poll{
+            position: absolute;
+            margin-top: 530px;
+            height: 200px;
+            width: 20px;
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <!-- <div class="box" id="box4">New box</div>
+        <div class="box" id="box5">New box</div>
+        <div class="box" id="box6">New box</div>
+        <div class="box" id="box7">New box</div>
+        <div class="box" id="box8">New box</div> -->
+    </div>
+    <div class="poll"></div>
+</body>
+<script>
+    const lights = [
+        document.getElementById('box1'),
+        document.getElementById('box2'),
+        document.getElementById('box3')
+    ];
+
+    let current = 0; // start with first light
+
+    function changeLight() {
+        // sab lights off (opacity 0.3)
+        lights.forEach(light => light.style.opacity = 0.3);
+
+        // current light on (opacity 1)
+        lights[current].style.opacity = 1;
+
+        // next light index
+        current = (current + 1) % lights.length;
+    }
+
+    // initial state
+    changeLight();
+
+    // run every 5 seconds
+    setInterval(changeLight, 5000);
+</script>
+
+</html>

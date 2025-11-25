@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<style>
+    body{
+        background-color: #333;
+        text-align: #fff;
+        
+    }
+    h2{
+        text-align: center;
+        color: antiquewhite;
+    }
+    label{
+        color: #fff;
+    }
+    .new_fomr{
+        width: 60%;
+        max-width: 400px;
+        display: flex;
+        gap: 10px;
+        margin: 0 auto ;
+        align-content: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .new_fomr input{
+        border: 1px solid #333;
+        border-radius:20px ;
+        padding: 20px;
+    }
+
+    .btn{
+        margin-top: 20px;
+        background-color: rgb(17, 131, 146);
+        color: #fff;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <h2>Sing Up Form</h2>
+    <form  class="new_fomr" action="">
+        <label for="Name">Full Name</label>
+        <input type="text" name="Enter Name">
+        <label for="Email">Email</label>
+        <input type="email" name="Enter Email" >
+        <label for="pasword">Password</label>
+        <input type="password" name="Enter password" >
+        <input class="btn" type="submit" name="" id="submit Now">
+    </form>
+</body>
+</html>

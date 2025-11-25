@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .heading{
+
+            font-size: 50px;
+            text-align: center;
+            font-weight: 700;
+            
+           
+        }
+        .gallery{
+            height: 500px;
+            width: 100%;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .gallery_container{
+            display: flex;
+            width: 100%;
+             flex-wrap: wrap; 
+            justify-content: center;
+            align-items:center;
+          
+            
+
+        }
+        .imge{
+            flex: 0 0 20%;
+        }
+        .imge img{
+            width: 100%;
+            padding: 10px;
+            height: 40vh;
+            border-radius: 30px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+   
+    <section class="gallery">
+         <h2 class="heading">Photo Gallery</h2>
+    <div class="gallery_container">
+        <div class="imge" ><img src="https://cdn.pixabay.com/photo/2020/05/27/06/42/nature-5225912_1280.jpg" alt=""></div>
+        <div class="imge"><img src="https://cdn.pixabay.com/photo/2020/03/15/12/41/tulips-4933492_1280.jpg" alt=""></div>
+        <div class="imge"><img src="https://cdn.pixabay.com/photo/2017/04/10/17/48/tulips-2219201_640.jpg" alt=""></div>
+        <div class="imge"><img src="https://cdn.pixabay.com/photo/2018/05/16/17/40/tulips-3406530_640.jpg" alt=""></div>
+    </div>
+    </section>
+</body>
+</html>
